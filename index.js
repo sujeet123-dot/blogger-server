@@ -4,7 +4,7 @@ const PORT = 3000;
 
 // Mock Database: mapping IDs to real websites
 const adDatabase = {
-  "1519-7970": "https://www.zenithummedia.com",
+  "1519-7970": "https://www.zenithummedia.com/case-studies?utm_source=google&utm_medium=medium&utm_campaign=SUJEETBEACON&utm_id=Visit_frame",
   "KOLpoiu": "https://www.cric4genz.in/?utm_source=google&utm_medium=medium&utm_campaign=ZM_USER_25JAN&utm_id=Visit_frame"
 };
 
@@ -13,7 +13,7 @@ app.get("/banners/:bannerId.html", (req, res) => {
   const id = req.params.bannerId;
   const targetUrl = adDatabase[id]; // your DB lookup
   const GA_ID = "G-SNCY0K36MC";
-  const destination = "https://www.zenithummedia.com";
+  const destination = "https://www.zenithummedia.com/case-studies?utm_source=google&utm_medium=medium&utm_campaign=SUJEETBEACON&utm_id=Visit_frame";
 
   if (targetUrl) {
     console.log(`Log: User clicked ID ${id}. Redirecting to ${targetUrl}`);
